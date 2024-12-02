@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>รายละเอียดสินค้า</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">ชื่อสินค้า</ion-label>
+      <ion-input [(ngModel)]="txtmenu"></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">ราคา</ion-label>
+      <ion-input [(ngModel)]="txtprice" type="number"></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">รายละเอียด</ion-label>
+      <ion-input [(ngModel)]="txtdetail"></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-button expand="block" (click)="addmenu()">บันทึก</ion-button>
+</ion-content>

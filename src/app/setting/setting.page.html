@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="w">
+    <ion-title>รายการสั่งซื้อ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="a">
+    <ion-button expand="full" type="submit">ส่ง</ion-button>
+  <ion-list> 
+    <ion-item *ngFor="let i of products" (click)="selectProduct(i)">
+      <ion-label>
+        <h2>{{ i.name }}</h2>
+        <p>{{ i.price }}</p>
+      </ion-label>
+      <ion-avatar slot="start">
+        <img [src]="i.imageURL" alt="{{ i.name }}">
+      </ion-avatar>
+      <ion-button fill="outline" slot="end" (click)="gotodetailproduct()" color="d">
+        เพิ่มใส่ตะกร้า
+      </ion-button>
+    </ion-item>
+
+  <form (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">จำนวน</ion-label>
+      <ion-input type="number" [(ngModel)]="quantity" name="quantity" required></ion-input>
+    </ion-item>
+    <ion-item button (click)="navigateToTransfer()">
+      <ion-label>โอนเงิน</ion-label>
+    </ion-item>
+    <ion-item button (click)="navigateToCOD()">
+      <ion-label>เก็บเงินปลายทาง</ion-label>
+    </ion-item>
+    </form>
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>ช่องชำระ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">ชื่อและนามสกุล</ion-label>
+      <ion-input [(ngModel)]="address.name" name="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">ที่อยู่</ion-label>
+      <ion-input [(ngModel)]="address.street" name="street" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">เมือง</ion-label>
+      <ion-input [(ngModel)]="address.city" name="city" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">จังหวัด</ion-label>
+      <ion-input [(ngModel)]="address.province" name="province" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">รหัสไปรษณีย์</ion-label>
+      <ion-input type="number" [(ngModel)]="address.zipcode" name="zipcode" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit">ส่ง</ion-button>
+  </form>
+</ion-content>

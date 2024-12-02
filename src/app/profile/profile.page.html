@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="w">
+    <ion-title>ประวัติส่วนตัว</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="a">
+  <div class="profile-container">
+    <img *ngIf="profileImage" [src]="profileImage" alt="Profile Image" class="profile-image" />
+    <div *ngIf="!profileImage" class="placeholder-image">
+      <img src="assets/img/Profile.jfif" alt="Profile Image" class="profile-image" />
+    </div>
+  </div>
+
+
+
+  <ion-card >
+  <ion-item class="input-color">
+    <ion-label>ชื่อนามสกุล</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+</ion-card>
+<ion-card>
+  <ion-item class="input-color">
+    <ion-label>อีเมล</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+</ion-card>
+<ion-card>
+  <ion-item class="input-color">
+    <ion-label>โทรศัพท์</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+</ion-card> 
+<ion-card>
+  <ion-item class="input-color">
+    <ion-label>ที่อยู่</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+</ion-card> 
+<br>
+<br>
+<ion-button expand="block" color="orangesa" class="ion-padding">แก้ไขข้อมูล</ion-button>
+</ion-content>

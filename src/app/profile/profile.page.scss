@@ -1,0 +1,36 @@
+.img-profile{
+    border-radius: 100%;
+    width: 100px;
+    height: 150px !important;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}.input-color{
+    color: white;
+    text-indent: 10px;
+}.btn-save{
+    border-radius: 10px;
+}
+#id{
+    border-radius: 100%;
+}.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 200px;
+  }
+  
+  .profile-image, .placeholder-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .placeholder-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
